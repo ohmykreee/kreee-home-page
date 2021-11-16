@@ -4,7 +4,9 @@ import React from 'react'
 import styles from '../styles/Home.module.css'
 import { siteconf } from '../site-config.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Twemoji } from 'react-emoji-render';
+import { Twemoji } from 'react-emoji-render'
+import SimpleBar from 'simplebar-react'
+import 'simplebar/dist/simplebar.min.css'
 
 export default function Home() {
   return (
@@ -17,7 +19,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <Cardlist />
-        <div className={styles.footer}> <p>{siteconf.footer}</p> </div>
+        <a className={styles.footer} href={siteconf.footer.url}>{siteconf.footer.text}</a>
       </main>
       
     </div>
@@ -27,11 +29,13 @@ export default function Home() {
 class Cardlist extends React.Component {
   render() {
     return(
+      <SimpleBar>
       <div className={styles.cardlist}>
         <Card type='Blog card'/>
         <Card type='Main card'/>
         <Card type='Project eureka'/>
-      </div>
+        </div>
+      </SimpleBar>
     )
   }
 }
@@ -56,7 +60,6 @@ class Card extends React.Component {
       <div className={styles.card} style={card_style}>
         <img src={info.avatar} alt={this.props.type + '\'s avatar image.'}></img>
         <p> <Twemoji svg text={info.description} /> </p>
-        <div className={styles.card_space}></div>
         <div className={styles.card_buttonlist}>
           <Buttonlist buttons={info.buttons}/>
         </div>
