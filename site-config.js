@@ -12,14 +12,17 @@ export const siteconf = {
     kblog: {
         avatar: 'https://blog.ohmykreee.top/android-chrome-256x256.png',
         description: 'Just a blog, blogging my life.',
-        buttons: [],
+        buttons: [{name:'Blog', fa:'fa-solid fa-circle-arrow-right', url:'https://blog.ohmykreee.top'}],
     },
 
     eureka: {
         avatar: 'https://blog.ohmykreee.top/android-chrome-256x256.png',
         description: 'This is eureka, for testing purpose.',
-        buttons: [],
+        buttons: [{name:'Eureka', fa:'fa-solid fa-circle-arrow-right', url:'https://next.ohmykreee.top'}],
     },
 
-    footer: 'Copyright © 2021 Kreee Jiang.',
+    footer: {
+        text: 'Copyright © 2021 Kreee Jiang.',
+        url: 'https://www.ohmykreee.top'
+    },
 }
