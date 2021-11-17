@@ -39,11 +39,19 @@ constructor(props) {
   componentDidMount() {
     const ref = this.scrollRef.current
     ref.scrollLeft = 0.7 * ref.clientWidth
+
+    ref.addEventListener('wheel', (event) => {
+      event.preventDefault();
+      ref.scrollTo({
+        left: ref.scrollLeft += event.deltaY,
+        behavior: 'smooth',
+      })
+    })
   }
 
   render() {
     return(
-      <SimpleBar autoHide={false} scrollableNodeProps={{ ref: this.scrollRef, style: this.scrollX}}>
+      <SimpleBar scrollableNodeProps={{ ref: this.scrollRef, style: this.scrollX}}>
       <div className={styles.cardlist}>
         <div className={styles.card_space}></div>
         <Card type='Blog'/>
