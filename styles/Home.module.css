@@ -1,0 +1,99 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardlist {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10vw;
+  margin-bottom: 1rem;
+}
+
+.card {
+  flex: none;
+  display: block;
+  height: 60vh;
+  width: 60vw;
+  border-radius: 0.375rem;
+  padding: 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 0 #0000, 0 0 #0000, 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px); */
+}
+
+.card_space {
+  flex: none;
+  display: block;
+  height: 60vh;
+  width: 10vw;
+}
+
+.card_img {
+  width: 25vmin;
+  height: 25vmin;
+  object-fit: scale-down;
+  object-position: top;
+  border-radius: 9999px;
+}
+
+.card p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color:#fff;
+	font-size: 1rem;
+  line-height: 1.75rem;
+}
+
+.card_buttonlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10vmin;
+}
+
+.card_buttonlist svg {
+  height: 10vmin;
+  margin: 0.75rem;
+}
+
+.footer {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width:641px) {
+
+  .card p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  
+  .card_buttonlist svg {
+    height: 5vmin;
+    margin: 1rem;
+  }
+  
+  .footer {
+    font-size: 1rem;
+  }
+}
