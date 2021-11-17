@@ -22,7 +22,9 @@ jobs:
         run: npm install
           
       - name: Build static page
-        run: npm run build
+        run: |
+          npm run build
+          touch ./out/.nojekyll
           
       - name: Deploy to GitHub Pages
         if: success()
