@@ -1,0 +1,36 @@
+name: Publish site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - dev-next.js
+
+jobs:
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+
+      - name: Setup Node 
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12
+
+      - name: Prepare workspace
+        run: npm install
+          
+      - name: Build static page
+        run: npm run build
+          
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: out
+          fqdn: www.ohmykreee.top
+          dry_run: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
