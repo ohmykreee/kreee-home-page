@@ -3,7 +3,7 @@ name: Publish site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - fix-baseurl-error
 
 jobs:
 
