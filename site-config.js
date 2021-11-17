@@ -11,14 +11,14 @@ export const siteconf = {
 
     kblog: {
         avatar: 'https://blog.ohmykreee.top/android-chrome-256x256.png',
-        description: 'Just a blog, blogging my life.',
+        description: 'Just a blog, blogging my life 📚 .',
         buttons: [{name:'Blog', fa:'fa-solid fa-circle-arrow-right', url:'https://blog.ohmykreee.top'}],
     },
 
     eureka: {
         avatar: 'https://blog.ohmykreee.top/android-chrome-256x256.png',
-        description: 'This is eureka, for testing purpose.',
-        buttons: [{name:'Eureka', fa:'fa-solid fa-circle-arrow-right', url:'https://next.ohmykreee.top'}],
+        description: 'We can create a dimension, together 🌌 .',
+        buttons: [{name:'Eureka', fa:'fa-solid fa-circle-arrow-right', url:'https://www.proj-eureka.top'}],
     },
 
     footer: {

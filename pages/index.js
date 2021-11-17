@@ -27,14 +27,30 @@ export default function Home() {
 }
 
 class Cardlist extends React.Component {
+constructor(props) {
+  super(props)
+
+  this.scrollRef = React.createRef()
+  this.scrollX = { 
+    overflowX: "scroll",
+  }
+}
+
+  componentDidMount() {
+    const ref = this.scrollRef.current
+    ref.scrollLeft = 0.7 * ref.clientWidth
+  }
+
   render() {
     return(
-      <SimpleBar>
+      <SimpleBar autoHide={false} scrollableNodeProps={{ ref: this.scrollRef, style: this.scrollX}}>
       <div className={styles.cardlist}>
-        <Card type='Blog card'/>
-        <Card type='Main card'/>
-        <Card type='Project eureka'/>
-        </div>
+        <div className={styles.card_space}></div>
+        <Card type='Blog'/>
+        <Card type='Main'/>
+        <Card type='Project Eureka'/>
+        <div className={styles.card_space}></div>
+      </div>
       </SimpleBar>
     )
   }
@@ -44,21 +60,21 @@ class Card extends React.Component {
   render() {
     let info, card_style
     switch(this.props.type) {
-      case 'Blog card':
+      case 'Blog':
         info = siteconf.kblog
         card_style = { backgroundColor: 'rgba(0, 99, 177, 0.6)' }
         break
-      case 'Main card':
+      case 'Main':
         info = siteconf.main
         card_style = { backgroundColor: 'rgba(0, 0, 0, 0.6)' }
         break
-      case 'Project eureka':
+      case 'Project Eureka':
         info = siteconf.eureka
         card_style = { backgroundColor: 'rgba(202, 80, 16, 0.6)' }
     }
     return(
       <div className={styles.card} style={card_style}>
-        <img src={info.avatar} alt={this.props.type + '\'s avatar image.'}></img>
+        <img className={styles.card_img} src={info.avatar} alt={this.props.type}></img>
         <p> <Twemoji svg text={info.description} /> </p>
         <div className={styles.card_buttonlist}>
           <Buttonlist buttons={info.buttons}/>
@@ -72,7 +88,7 @@ class Buttonlist extends React.Component {
   render() {
     const lists = this.props.buttons
     const renderButton = lists.map((item) => 
-      <a key={item.name} href={item.url} target="_blank">
+      <a key={item.name} href={item.url} target="_blank" title={item.name}>
         <FontAwesomeIcon icon={item.fa} color="white"></FontAwesomeIcon>
       </a>
     )

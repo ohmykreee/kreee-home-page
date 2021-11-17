@@ -20,9 +20,7 @@
   display: flex;
   flex-direction: row;
   column-gap: 10vw;
-  overflow-x: hide;
-  padding-left: 20vw;
-  padding-right: 20vw;
+  margin-bottom: 1rem;
 }
 
 .card {
@@ -38,7 +36,14 @@
   backdrop-filter: blur(10px); */
 }
 
-.card img {
+.card_space {
+  flex: none;
+  display: block;
+  height: 60vh;
+  width: 10vw;
+}
+
+.card_img {
   width: 25vmin;
   height: 25vmin;
   object-fit: scale-down;
