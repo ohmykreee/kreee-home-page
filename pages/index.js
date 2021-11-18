@@ -13,7 +13,7 @@ export default function Home() {
     <Head>
       <title>Home Page - Kreee</title>
 
-      <meta name="siteBaseUrl" content="https://www.ohmykreee.top" />
+      <meta name="siteBaseUrl" content={siteconf.baseurl} />
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="author" content="Kreee" />

@@ -22,7 +22,7 @@ body {
     -30vmax -10vmax,
     50vmax 50vmax;
   /* background-repeat: no-repeat; */
-  animation: 60s movement linear infinite;
+  animation: 30s movement linear infinite;
   z-index: -2;
 }
 
@@ -84,7 +84,7 @@ body::after {
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 * {
