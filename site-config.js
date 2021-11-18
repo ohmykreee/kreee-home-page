@@ -1,4 +1,6 @@
 export const siteconf = {
+    baseurl: "https://www.ohmykreee.top",
+
     main: {
         avatar: 'https://avatars.githubusercontent.com/u/76862878',
         description: 'Code with love ❤️ and paws 🐾!',
@@ -11,13 +13,13 @@ export const siteconf = {
 
     kblog: {
         avatar: 'https://blog.ohmykreee.top/avatar.jpg',
-        description: 'Just a blog, blogging my life 📚 .',
+        description: 'Just a blog, blogging my life. 📚',
         buttons: [{name:'Blog', fa:'fa-solid fa-circle-arrow-right', url:'https://blog.ohmykreee.top'}],
     },
 
     eureka: {
         avatar: 'https://www.proj-eureka.top/avatar.jpg',
-        description: 'We can create a dimension, together 🌌 .',
+        description: 'We can create a new dimension, together. 🌌',
         buttons: [{name:'Eureka', fa:'fa-solid fa-circle-arrow-right', url:'https://www.proj-eureka.top'}],
     },
 
