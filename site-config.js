@@ -1,4 +1,6 @@
 export const siteconf = {
+    baseurl: "https://www.ohmykreee.top",
+
     main: {
         avatar: 'https://avatars.githubusercontent.com/u/76862878',
         description: 'Code with love ❤️ and paws 🐾!',
