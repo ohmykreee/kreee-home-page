@@ -1,5 +1,5 @@
-import { Header } from '../compoents/Header'
-import { Footer } from '../compoents/Footer'
+import { Header } from '../components/Header'
+import { Footer } from '../components/Footer'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import { siteconf } from '../site-config.js'
