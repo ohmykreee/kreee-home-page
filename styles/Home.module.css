@@ -72,15 +72,6 @@
   margin: 0.75rem;
 }
 
-.footer {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  color:#fff;
-  text-align: center;
-  margin-top: 2rem;
-  font-size: 0.8rem;
-}
-
 @media (min-width:641px) {
 
   .card p {
@@ -91,9 +82,5 @@
   .card_buttonlist svg {
     height: 5vmin;
     margin: 1rem;
-  }
-  
-  .footer {
-    font-size: 1rem;
   }
 }

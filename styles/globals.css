@@ -82,6 +82,15 @@ body::after {
   }
 }
 
+footer{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color:#fff;
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+}
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -89,4 +98,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (min-width:641px) {
+  footer {
+    font-size: 1rem;
+  }
 }
