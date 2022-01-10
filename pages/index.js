@@ -30,7 +30,6 @@ class Cardlist extends React.Component {
   }
 
   handleScroll = (e) => {
-    e.preventDefault();
     this.scrollRef.current.scrollTo({
       left: this.scrollRef.current.scrollLeft += e.deltaY,
       behavior: 'smooth',
@@ -39,11 +38,11 @@ class Cardlist extends React.Component {
 
   componentDidMount() {
     this.scrollRef.current.scrollLeft = 0.7 * this.scrollRef.current.clientWidth
-    this.scrollRef.current.addEventListener('wheel', this.handleScroll)
+    this.scrollRef.current.addEventListener('wheel', this.handleScroll, {passive: true})
   }
 
   componentWillUnmount() {
-    this.scrollRef.current.removeEventListener('wheel', this.handleScroll)
+    this.scrollRef.current.removeEventListener('wheel', this.handleScroll, {passive: true})
   }
 
   render() {
