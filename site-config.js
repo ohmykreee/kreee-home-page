@@ -30,7 +30,7 @@ export const siteconf = {
     },
 
     footer: {
-        text: 'Copyright © 2021 Kreee Jiang.',
+        text: 'Copyright © 2021 - 2022 Kreee Jiang.',
         url: 'https://www.ohmykreee.top'
     },
 }
