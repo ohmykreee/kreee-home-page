@@ -9,7 +9,8 @@ export const siteconf = {
         buttons: [
             {name:'GitHub', fa:'fa-brands fa-github', url:'https://github.com/ohmykreee'}, 
             {name:'Twitter', fa:'fa-brands fa-twitter', url:'https://twitter.com/kreeejiang'},
-            {name:'Steam', fa:'fa-brands fa-steam', url:'https://steamcommunity.com/id/kreeejiang/'},
+            {name:'Steam', fa:'fa-brands fa-steam', url:'https://steamcommunity.com/id/kreeejiang'},
+            {name:'osu!', fa:'fa-brands fa-osu', url:'https://osu.ppy.sh/users/27746946'},
             {name:'Bilibili', fa:'fa-brands fa-bilibili', url:'https://space.bilibili.com/361507684'}],
     },
 
