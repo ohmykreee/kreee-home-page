@@ -1,4 +1,4 @@
-import { HomeLinkList } from "./components/LinkList"
+import { LinkList } from "./components/LinkList"
 
 export const siteconf = {
     baseurl: "https://www.ohmykreee.top",
@@ -8,7 +8,7 @@ export const siteconf = {
         bgstyle: { backgroundColor: 'rgba(0, 0, 0, 0.6)' },
         avatar: 'https://avatars.githubusercontent.com/u/76862878',
         description: 'Code with love ❤️ and paws 🐾!',
-        buttons: HomeLinkList,
+        buttons: LinkList(4, true),
     },
 
     kblog: {
