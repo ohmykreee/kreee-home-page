@@ -71,7 +71,7 @@ class Card extends React.Component {
         <div className={styles.card_buttonlist}>
           {info.buttons.map((item) =>
             <a key={item.name} href={item.url} target="_blank" title={item.name} rel="noreferrer">
-              <FontAwesomeIcon icon={item.fa} color="white"></FontAwesomeIcon>
+              <FontAwesomeIcon icon={item.fa} color="white" />
             </a>
           )}
         </div>
