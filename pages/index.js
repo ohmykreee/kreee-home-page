@@ -70,7 +70,7 @@ class Card extends React.Component {
         <p> <Twemoji svg text={info.description} /> </p>
         <div className={styles.card_buttonlist}>
           {info.buttons.map((item) =>
-            <a key={item.name} href={item.url} target="_blank" title={item.name} rel="noreferrer">
+            <a key={item.name} href={item.url} target={item.noNewtab === true ? "_self" : "_blank"} title={item.name} rel="noreferrer">
               <FontAwesomeIcon icon={item.fa} color="white" />
             </a>
           )}
