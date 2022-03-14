@@ -4,6 +4,8 @@ const link = [
   {name:'Bilibili', fa:'fa-brands fa-bilibili', url:'https://space.bilibili.com/361507684'},
   {name:'osu!', fa:'fa-brands fa-osu', url:'https://osu.ppy.sh/users/27746946'},
   {name:'Steam', fa:'fa-brands fa-steam', url:'https://steamcommunity.com/id/kreeejiang'},
+  {name:'Blog', fa:'fa-solid fa-square-rss', url:'https://blog.ohmykreee.top'},
+  {name:'Eureka', fa:'fa-solid fa-meteor', url:'https://proj-eureka.top'},
 ]
 
 export function LinkList(linkNum, isMain) {
