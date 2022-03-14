@@ -1,10 +1,12 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faCircleArrowRight, faHouse, faGrip } from '@fortawesome/free-solid-svg-icons'
+import { faCircleArrowRight, faHouse, faGrip, faSquareRss, faMeteor } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faTwitter, faSteam, faBilibili } from '@fortawesome/free-brands-svg-icons'
 
 export function initIcon() {
-  library.add(faHouse, faGrip, faCircleArrowRight, faGithub, faTwitter, faSteam, faBilibili)
-  library.add({
+  library.add(
+    faHouse, faGrip, faCircleArrowRight, faGithub, faTwitter, faSteam, faBilibili, faSquareRss, faMeteor)
+  
+    library.add({
     osu: {
       iconName: 'osu',
       prefix: 'fab',
