@@ -1,5 +1,5 @@
 .container {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   padding: 0;
@@ -68,7 +68,7 @@
 }
 
 .card_buttonlist svg {
-  height: 10vmin;
+  width: 10vmin;
   margin: 0.75rem;
 }
 
@@ -80,7 +80,7 @@
   }
   
   .card_buttonlist svg {
-    height: 5vmin;
+    width: 5vmin;
     margin: 1rem;
   }
 }
