@@ -1,3 +1,5 @@
+import { LinkList } from "./components/LinkList"
+
 export const siteconf = {
     baseurl: "https://www.ohmykreee.top",
 
@@ -6,12 +8,7 @@ export const siteconf = {
         bgstyle: { backgroundColor: 'rgba(0, 0, 0, 0.6)' },
         avatar: 'https://avatars.githubusercontent.com/u/76862878',
         description: 'Code with love ❤️ and paws 🐾!',
-        buttons: [
-            {name:'GitHub', fa:'fa-brands fa-github', url:'https://github.com/ohmykreee'}, 
-            {name:'Twitter', fa:'fa-brands fa-twitter', url:'https://twitter.com/kreeejiang'},
-            {name:'Steam', fa:'fa-brands fa-steam', url:'https://steamcommunity.com/id/kreeejiang'},
-            {name:'osu!', fa:'fa-brands fa-osu', url:'https://osu.ppy.sh/users/27746946'},
-            {name:'Bilibili', fa:'fa-brands fa-bilibili', url:'https://space.bilibili.com/361507684'}],
+        buttons: LinkList(4, true),
     },
 
     kblog: {
