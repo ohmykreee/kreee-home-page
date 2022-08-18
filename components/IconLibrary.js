@@ -6,7 +6,7 @@ export function initIcon() {
   library.add(
     faHouse, faGrip, faCircleArrowRight, faGithub, faTwitter, faSteam, faBilibili, faSquareRss, faMeteor, faHouseChimneyUser)
   
-    library.add({
+  library.add({
     osu: {
       iconName: 'osu',
       prefix: 'fab',
