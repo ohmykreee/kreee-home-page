@@ -1,5 +1,6 @@
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ButtonAnimation, CardAnimation } from '../components/Animation'
 import React from 'react'
 import styles from '../styles/Home.module.css'
 import { siteconf } from '../site-config.js'
@@ -12,8 +13,8 @@ export default function Custom404() {
   <Header title='Awwh - 404 Page Not Found' />
 
   <main className={styles.main}>
-      <Card404 />
-      <Footer />
+    <Card404 />
+    <Footer />
   </main>
       
   </div>
@@ -26,15 +27,19 @@ export default function Custom404() {
       style['margin'] = '0 auto'
 
       return(
-        <div className={styles.card} style={style}>
-        <img className={styles.card_img} src="/avatar.jpg" alt="404 Not Found"></img>
-        <p> <Twemoji svg text="404 | This page could not be found. 👾" /> </p>
-        <div className={styles.card_buttonlist}>
-        <a href={siteconf.baseurl} title="Home" rel="noreferrer">
-            <FontAwesomeIcon icon="fa-solid fa-house" color="white"></FontAwesomeIcon>
-        </a>
-        </div>
-      </div>
+        <CardAnimation>
+          <div className={styles.card} style={style}>
+            <img className={styles.card_img} src="/avatar.jpg" alt="404 Not Found"></img>
+            <p> <Twemoji svg text="404 | This page could not be found. 👾" /> </p>
+              <div className={styles.card_buttonlist}>
+              <ButtonAnimation name='Home'>
+              <a href={siteconf.baseurl} title="Home" rel="noreferrer">
+                  <FontAwesomeIcon icon="fa-solid fa-house" color="white"></FontAwesomeIcon>
+              </a>
+              </ButtonAnimation>
+              </div>
+          </div>
+        </CardAnimation>
       )
     }
   }

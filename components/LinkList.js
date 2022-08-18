@@ -6,6 +6,7 @@ const link = [
   {name:'Steam', fa:'fa-brands fa-steam', url:'https://steamcommunity.com/id/kreeejiang'},
   {name:'Blog', fa:'fa-solid fa-square-rss', url:'https://blog.ohmykreee.top'},
   {name:'Eureka', fa:'fa-solid fa-meteor', url:'https://proj-eureka.top'},
+  {name:'Home', fa:'fa-solid fa-house-chimney-user', url:'https://www.ohmykreee.top'},
 ]
 
 export function LinkList(linkNum, isMain) {
