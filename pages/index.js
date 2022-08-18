@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../styles/Home.module.css'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+import { ButtonAnimation, CardAnimation } from '../components/Animation'
 import { siteconf } from '../site-config.js'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Twemoji } from 'react-emoji-render'
@@ -48,13 +49,13 @@ class Cardlist extends React.Component {
   render() {
     return(
       <SimpleBar scrollableNodeProps={{ ref: this.scrollRef, style: {overflowX: 'scroll'}}}>
-      <div className={styles.cardlist}>
-        <div className={styles.card_space}></div>
-        <Card type='kblog'/>
-        <Card type='main'/>
-        <Card type='eureka'/>
-        <div className={styles.card_space}></div>
-      </div>
+        <div className={styles.cardlist}>
+          <div className={styles.card_space}></div>
+          <Card type='kblog'/>
+          <Card type='main'/>
+          <Card type='eureka'/>
+          <div className={styles.card_space}></div>
+        </div>
       </SimpleBar>
     )
   }
@@ -65,17 +66,19 @@ class Card extends React.Component {
     const type = this.props.type
     const info = siteconf[type]
     return(
-      <div className={styles.card} style={info.bgstyle} >
-        <img className={styles.card_img} src={info.avatar} alt={info.name}></img>
-        <p> <Twemoji svg text={info.description} /> </p>
-        <div className={styles.card_buttonlist}>
-          {info.buttons.map((item) =>
-            <a key={item.name} href={item.url} target={item.noNewtab === true ? "_self" : "_blank"} title={item.name} rel="noreferrer">
-              <FontAwesomeIcon icon={item.fa} color="white" />
-            </a>
-          )}
+      <CardAnimation>
+        <div className={styles.card} style={info.bgstyle} >
+          <img className={styles.card_img} src={info.avatar} alt={info.name}></img>
+          <p> <Twemoji svg text={info.description} /> </p>
+          <div className={styles.card_buttonlist}>
+            {info.buttons.map((item) =>
+              <ButtonAnimation key={item.name}><a href={item.url} target={item.noNewtab === true ? "_self" : "_blank"} title={item.name} rel="noreferrer">
+                <FontAwesomeIcon icon={item.fa} color="white" />
+              </a></ButtonAnimation>
+            )}
+          </div>
         </div>
-      </div>
+      </CardAnimation>
     )
   }
 }
