@@ -7,7 +7,7 @@ export const siteconf = {
         name: 'Main',
         bgstyle: { backgroundColor: 'rgba(0, 0, 0, 0.6)' },
         avatar: 'https://avatars.githubusercontent.com/u/76862878',
-        description: 'const subtitle = isWolf? \"Bad Guy! 🐾 \":\"Good Boy! ❤️ \"',
+        description: 'return isWolf? \"Bad Guy 🐾 \":\"Good Boi ❤️ \"',
         buttons: LinkList(4, true),
     },
 
