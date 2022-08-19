@@ -16,6 +16,7 @@ export const CardAnimation = ({ children }) => {
   return (
     <motion.div
       style={{opacity: 0}}
+      transition={{delay: 0.3}}
       animate={{
         scale: [0.9, 1],
         opacity: 1
