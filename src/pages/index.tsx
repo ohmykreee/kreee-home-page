@@ -60,7 +60,7 @@ class BriefBio extends React.Component<{theme: string | undefined}> {
   <span class="theme_colored_text">Learning: </span>${this._bioMetadata.learning}<br />
   <span class="theme_colored_text">CPU: </span>${this._bioMetadata.cpu}<br />
   <span class="theme_colored_text">GPU: </span>${this._bioMetadata.gpu}<br />
-  <span style="letter-spacing: -5px;">${this._themeColor.map(color => `<span style="color:${color};">▇▇</span>`).join("")}</span></p>
+  <span style="letter-spacing:-5px;font-weight:700;">${this._themeColor.map(color => `<span style="color:${color};">▇▇</span>`).join("")}</span></p>
   `
   private bioRef: React.RefObject<HTMLDivElement>
 

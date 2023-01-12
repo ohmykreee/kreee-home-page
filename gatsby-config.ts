@@ -73,7 +73,9 @@ const config: GatsbyConfig = {
       },
     },
   
-  "gatsby-plugin-sass"]
+  "gatsby-plugin-sass",
+  "gatsby-plugin-catch-links"
+]
 };
 
 export default config;
