@@ -1,0 +1,30 @@
+@import "variables";
+
+// used for article like About
+
+.container {
+  padding: 2rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 700;
+    text-transform: capitalize;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+  h2::before {
+    content: "> ";
+  }
+  h3 {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+  }
+}

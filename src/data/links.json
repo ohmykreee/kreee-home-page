@@ -1,0 +1,8 @@
+[
+  {"name":"GitHub", "icon":"fa-brands fa-github", "url":"https://github.com/ohmykreee"}, 
+  {"name":"Twitter", "icon":"fa-brands fa-twitter", "url":"https://twitter.com/kreeejiang"},
+  {"name":"Bilibili", "icon":"fa-brands fa-bilibili", "url":"https://space.bilibili.com/361507684"},
+  {"name":"osu!", "icon":"fa-brands fa-osu", "url":"https://osu.ppy.sh/users/27746946"},
+  {"name":"Steam", "icon":"fa-brands fa-steam", "url":"https://steamcommunity.com/id/kreeejiang"},
+  {"name":"Blog", "icon":"fa-solid fa-square-rss", "url":"https://blog.ohmykreee.top"}
+]
