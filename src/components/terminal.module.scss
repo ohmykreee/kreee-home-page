@@ -1,0 +1,134 @@
+@import "../styles/variables";
+
+.terminal_container {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 32px);
+  min-height: 30rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 0.375rem;
+  filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+  outline-style: solid;
+  outline-width: 0.75px;
+}
+
+.terminal_title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  height: 3rem;
+  background-color: $title_bg_color;
+  border-radius: 0.375rem 0.375rem 0 0;
+  box-shadow: inset 0 2px 10px 0 rgba(110, 116, 113, 0.05);
+}
+
+.title_container {
+  height: inherit;
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+	align-items: flex-end;
+}
+
+.title_btn {
+	font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-decoration: none;
+  color: rgb(154, 154, 154);
+  margin: 0 0 0 0.5rem;
+  padding: 0.4rem 1rem 0.25rem 1rem;
+  border-radius: 0.125rem 0.125rem 0 0;
+}
+
+.title_btn_pressed {
+  white-space: nowrap;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  text-decoration: none;
+  margin: 0 0 0 0.5rem;
+  padding: 0.4rem 1rem 0.25rem 1rem;
+  border-radius: 0.125rem 0.125rem 0 0;
+  background-color: $title_btn_activate;
+  outline-color: rgba(0, 0, 0, 0.3);
+  outline-style: solid;
+  outline-width: 1px;
+}
+
+.title_btn:hover {
+  background-color: $title_btn_hover;
+  transition: 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close_btn {
+  display: flex;
+  flex-shrink: 0;
+  background-color: $close_btn;
+  border-radius: 9999px;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 0 1rem;
+  justify-content: center;
+  align-items: center;
+  cursor: not-allowed;
+  svg {
+    color: #ffff;
+    height: 0.75rem;
+  }
+}
+
+.terminal_window {
+  width: 100%;
+  flex-grow: 1;
+  background-color: $terminal_color;
+  border-radius: 0 0 0.375rem 0.375rem;
+}
+
+.theme_btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem 1rem 0;
+  border-radius: 9999px;
+  background-color: $terminal_color;
+  z-index: 90;
+  outline-style: dashed;
+  outline-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  svg {
+    height: 1.5rem;
+  }
+}
+
+.theme_btn:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: $breakpoint) {
+  .terminal_container {
+    width: calc($breakpoint - 16px);
+    margin-top: 20vh;
+  }
+
+  .theme_btn {
+    margin: 0 6rem 3rem 0;
+  }
+
+  .title_btn, .title_btn_pressed{
+    margin: 0 0 0 1rem;
+    padding: 0.4rem 3rem 0.25rem 3rem;
+  }
+}
