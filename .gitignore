@@ -8,12 +8,9 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
-
 # production
 /build
+public
 
 # misc
 .DS_Store
@@ -30,8 +27,14 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-# vercel
-.vercel
+# gatsby
+.cache/
+src/gatsby-types.d.ts
+graphql.config.js
 
+# vscode
 .vscode
+.hintrc
+
+# others
 build-res

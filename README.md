@@ -1,11 +1,7 @@
 # Home Page - Kreee
 ## About
-Home page of [ohmykreee.top](https://www.ohmykreee.top). Written with React & Next.js.
+Home page of [ohmykreee.top](https://www.ohmykreee.top). Written with React & Gatsby.
 
-## Libraries
-* [React](https://reactjs.org)
-* [Next.js by Vercel](https://nextjs.org)
-* [react-emoji-render by tommoor](https://github.com/tommoor/react-emoji-render)
-* [Simplebar by Grsmto](https://github.com/Grsmto/simplebar)
-* [Font Awsome Icons 6](https://fontawesome.com/v6.0)
-* [Framer Motion](https://www.framer.com/motion/)
+A frontend project aimed to practice my skill and have my own info homepage, so feel free to fork / change something to your own.
+
+Any suggestion about code quality / design is highly welcomed. You can bring it up in issue / discussion.

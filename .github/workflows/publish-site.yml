@@ -1,6 +1,7 @@
 name: Publish site to GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
@@ -14,24 +15,23 @@ jobs:
         uses: actions/checkout@master
 
       - name: Setup Node 
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 18
 
       - name: Prepare workspace
         run: npm install
           
       - name: Build static page
-        run: |
-          npm run build
-          touch ./out/.nojekyll
+        run: npm run build
           
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: gh-pages
-          build_dir: out
+          build_dir: public
+          jekyll: false
           fqdn: www.ohmykreee.top
           dry_run: false
         env:
