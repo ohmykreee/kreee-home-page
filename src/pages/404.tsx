@@ -1,49 +1,32 @@
+import "../styles/global.scss"
+import * as styles from "../styles/notfound.module.scss"
 import * as React from "react"
-import { Link, HeadFC, PageProps } from "gatsby"
+import { Link } from "gatsby"
+import type { HeadFC, PageProps } from "gatsby"
+import { SEO } from "../components/seo"
+import { Terminal, ThemeStateContext } from "../components/terminal"
+import { Footer } from "../components/footer"
 
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
 
 const NotFoundPage: React.FC<PageProps> = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
-        <br />
-        {process.env.NODE_ENV === "development" ? (
-          <>
-            <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
-            <br />
-          </>
-        ) : null}
-        <br />
-        <Link to="/">Go home</Link>.
-      </p>
-    </main>
+    <>
+    <Terminal title="404"><ThemeStateContext.Consumer>
+      {theme => {
+        return (
+          <div className={styles.container}>
+            <Link to="/"><img src="/avatar.jpg" alt="404 - Not Found" style={{outlineColor: theme}}></img></Link>
+            <p>404 | This page could not be found. 👾<br />
+            You can use the navigation above to go back to Home.</p>
+          </div>
+        )
+      }}
+    </ThemeStateContext.Consumer></Terminal>
+    <Footer />
+    </>
   )
 }
 
-export default NotFoundPage
 
-export const Head: HeadFC = () => <title>Not found</title>
+export default NotFoundPage
+export const Head: HeadFC = () => <SEO title="404 - Kreee's Home Page"/>

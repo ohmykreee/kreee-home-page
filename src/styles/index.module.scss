@@ -1,0 +1,55 @@
+@import "variables";
+
+.container {
+  font-size: 1.1rem;
+  line-height: 1.3rem;
+  overflow-wrap: normal;
+  word-break: normal;
+  margin: 0.25rem;
+}
+
+.bio_container {
+  display: flex;
+  flex-direction: column;
+  img {
+    border-radius: 9999px;
+    flex-shrink: 0;
+    width: 30vw;
+    align-self: center;
+    margin-top: 1rem;
+    outline-style: solid;
+    outline-width: 2px;
+  }
+  .Typewriter__wrapper {
+    flex-grow: 1;
+  }
+}
+
+.links_container {
+  .link_list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+    a {
+      text-decoration: none;
+      padding: 0.25rem 0;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .bio_container {
+    flex-direction: row;
+    img {
+      width: 13rem;
+      margin: 2rem 3rem;
+    }
+  }
+
+}

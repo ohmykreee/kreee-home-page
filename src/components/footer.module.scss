@@ -1,0 +1,17 @@
+@import "../styles/variables";
+
+.footer {
+  width: calc(100vw - 32px);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 10rem;
+}
+
+@media (min-width: $breakpoint) {
+  .footer {
+    width: calc($breakpoint - 16px);
+    margin-bottom: 2rem;
+  }
+}
