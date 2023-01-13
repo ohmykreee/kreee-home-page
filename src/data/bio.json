@@ -1,11 +1,14 @@
 {
   "avatar": "https://avatars.githubusercontent.com/u/76862878",
-  "name": "Kreee",
-  "job": "Student",
-  "species": "Canine (Coyote)",
-  "mail": "contact@ohmykreee.top",
-  "learning": "Frontend with react, drawing...",
-  "cpu": "DoggoBrain KindaStupid @ unknown",
-  "gpu": "DoggoEyes NearSighted",
-  "signs": "Code with love ❤ and paws 🐾!"
+  "props": "kreee@ohmykreee.top",
+  "signs": "Code with love ❤ and paws 🐾!",
+  "render": {
+    "Name": "Kreee",
+    "Job": "Student",
+    "Species": "Canine (Coyote)",
+    "Mail": "<a href=\"mailto:contact@ohmykreee.top\">contact@ohmykreee.top</a>",
+    "Learning": "Frontend with react, drawing...",
+    "CPU": "DoggoBrain KindaStupid @ unknown",
+    "GPU": "DoggoEyes NearSighted"
+  }
 }

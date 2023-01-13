@@ -50,19 +50,19 @@ const config: GatsbyConfig = {
       },
     },
 
-    { 
-      resolve: `gatsby-omni-font-loader`,
-      options: {
-        enableListener: true,
-        preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
-        web: [
-          {
-            name: `Ubuntu Mono`,
-            file: `https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap`,
-          },
-        ],
-      },
-    },
+    // { 
+    //   resolve: `gatsby-omni-font-loader`,
+    //   options: {
+    //     enableListener: true,
+    //     preconnect: [`https://fonts.googleapis.com`, `https://fonts.gstatic.com`],
+    //     web: [
+    //       {
+    //         name: `Ubuntu Mono`,
+    //         file: `https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap`,
+    //       },
+    //     ],
+    //   },
+    // },
 
     "gatsby-transformer-json",
 
