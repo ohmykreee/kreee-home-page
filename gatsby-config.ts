@@ -1,6 +1,9 @@
 import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
+  // flags: {
+  //   DEV_SSR: true,
+  // },
   siteMetadata: {
     title: `Kreee's Home Page`,
     siteUrl: `https://www.ohmykreee.top`,
@@ -75,7 +78,6 @@ const config: GatsbyConfig = {
   
   "gatsby-plugin-sass",
   "gatsby-plugin-catch-links"
-]
-};
+  ]};
 
 export default config;
