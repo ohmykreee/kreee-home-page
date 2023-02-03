@@ -5,8 +5,9 @@ import type { HeadFC, PageProps } from "gatsby"
 import type { IconProp } from "@fortawesome/fontawesome-svg-core"
 import { SEO } from "../components/seo"
 import LinksData from "../data/links.json"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Terminal, ThemeStateContext } from "../components/terminal"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Terminal } from "../components/terminal"
+import { ThemeStateContext } from "../components/base"
 import { Footer } from "../components/footer"
 
 interface LinksMetadata {

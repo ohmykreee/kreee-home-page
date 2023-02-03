@@ -4,7 +4,8 @@ import * as React from "react"
 import { Link } from "gatsby"
 import type { HeadFC, PageProps } from "gatsby"
 import { SEO } from "../components/seo"
-import { Terminal, ThemeStateContext } from "../components/terminal"
+import { Terminal } from "../components/terminal"
+import { ThemeStateContext } from "../components/base"
 import { Footer } from "../components/footer"
 
 

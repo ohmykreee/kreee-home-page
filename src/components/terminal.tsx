@@ -1,24 +1,22 @@
-import React, { useState, createContext } from "react"
+import React from "react"
 import { Link } from "gatsby"
-import useThemeColor from "../hooks/use-theme-color"
 import * as styles from "./terminal.module.scss"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-export const ThemeStateContext = createContext<string | undefined>(undefined)
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { ThemeStateContext } from "./base"
 
 export const Terminal = ({ title, children }: {title: string, children: JSX.Element}): JSX.Element => {
-  const [theme, setTheme] = useState<string>(useThemeColor.getCurrColor())
 
   return (
-    <ThemeStateContext.Provider value={theme}>
-      <div className={styles.terminal_container} style={{outlineColor: theme}}>
-        <TerminalTitle title={title}/>
-        <TerminalWindow>{ children }</TerminalWindow>
-      </div>
-    <div className={styles.theme_btn} onClick={() => {setTheme(useThemeColor.getNextColor())}}>
-      <FontAwesomeIcon icon="repeat" color={theme} />
-    </div>
-    </ThemeStateContext.Provider>
+    <ThemeStateContext.Consumer>
+      {theme => {
+        return(
+          <div className={styles.terminal_container} style={{outlineColor: theme}}>
+          <TerminalTitle title={title}/>
+          <TerminalWindow>{ children }</TerminalWindow>
+        </div>
+        )
+      }}
+    </ThemeStateContext.Consumer>
   )
 }
 

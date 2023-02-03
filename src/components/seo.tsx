@@ -39,7 +39,7 @@ export const SEO = ({ title, description, pathname, children }: SEO): JSX.Elemen
     <>
       <Helmet
         htmlAttributes={{
-          lang: 'en',
+          lang: "en",
         }}
       />
       <title>{seo.title}</title>

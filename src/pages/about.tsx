@@ -3,7 +3,8 @@ import * as styles from "../styles/article.module.scss"
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { SEO } from "../components/seo"
-import { Terminal, ThemeStateContext } from "../components/terminal"
+import { Terminal } from "../components/terminal"
+import { ThemeStateContext } from "../components/base"
 import { Footer } from "../components/footer"
 import About from "../mdx/about.mdx"
 
@@ -34,7 +35,7 @@ class Article extends React.Component<{theme: string | undefined}> {
   updateColor(): void {
     const style = document.createElement("style")
     style.innerHTML = `.${styles.container} b{color: ${this.props.theme};} .${styles.container} a{color:${this.props.theme};}`
-    Array.prototype.slice.call(this.containerRef.current?.getElementsByTagName('style')).forEach((item) => {
+    Array.prototype.slice.call(this.containerRef.current?.getElementsByTagName("style")).forEach((item) => {
       this.containerRef.current?.removeChild(item)
     }) // delete old style tag to prevent memory leaks.
     this.containerRef.current?.appendChild(style)

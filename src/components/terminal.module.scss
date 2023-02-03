@@ -89,42 +89,10 @@
   border-radius: 0 0 0.375rem 0.375rem;
 }
 
-.theme_btn {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 4rem;
-  height: 4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 1rem 1rem 0;
-  border-radius: 9999px;
-  background-color: $terminal_color;
-  z-index: 90;
-  outline-style: dashed;
-  outline-color: rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  svg {
-    height: 1.5rem;
-  }
-}
-
-.theme_btn:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-    transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 @media (min-width: $breakpoint) {
   .terminal_container {
     width: calc($breakpoint - 16px);
     margin-top: 20vh;
-  }
-
-  .theme_btn {
-    margin: 0 6rem 3rem 0;
   }
 
   .title_btn, .title_btn_pressed{
