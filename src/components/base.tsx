@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react"
+import React, { createContext } from "react"
 import * as styles from "./base.module.scss"
 import { GatsbyBrowser } from "gatsby"
 import useRandomBg, { bgMetadata } from "../hooks/use-random-bg"
