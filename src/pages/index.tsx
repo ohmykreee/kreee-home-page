@@ -7,9 +7,10 @@ import { SEO } from "../components/seo"
 import useThemeColor from "../hooks/use-theme-color"
 import BioData from "../data/bio.json"
 import LinksData from "../data/links.json"
-import { Terminal, ThemeStateContext } from "../components/terminal"
+import { Terminal } from "../components/terminal"
+import { ThemeStateContext } from "../components/base"
 import { Footer } from "../components/footer"
-import Typewriter from 'typewriter-effect';
+import Typewriter from "typewriter-effect"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -56,7 +57,7 @@ class BriefBio extends React.Component<{theme: string | undefined}> {
   updateColor(): void {
     const style = document.createElement("style")
     style.innerHTML = `.Typewriter__wrapper span{color:${this.props.theme};}`
-    Array.prototype.slice.call(this.bioRef.current?.getElementsByTagName('style')).forEach((item) => {
+    Array.prototype.slice.call(this.bioRef.current?.getElementsByTagName("style")).forEach((item) => {
       this.bioRef.current?.removeChild(item)
     }) // delete old style tag to prevent memory leaks.
     this.bioRef.current?.appendChild(style)
@@ -79,7 +80,7 @@ class BriefBio extends React.Component<{theme: string | undefined}> {
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString(this._typedText)
-              .start();
+              .start()
           }}
           options={{
             autoStart: false,
