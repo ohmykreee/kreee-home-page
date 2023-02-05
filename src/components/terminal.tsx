@@ -31,11 +31,11 @@ class TerminalTitle extends React.Component<{title: string}> {
     return(
       <div className={styles.terminal_title}>
         <div className={styles.title_container}>
+          {this._PinnedTab.includes(this.props.title)? <></>:<Link key={this.props.title.toLowerCase().replaceAll(" ", "_")} className={styles.title_btn_pressed} to={`/${this.props.title.toLowerCase().replaceAll(" ", "_")}`}>{this.props.title}</Link>}
           {this._PinnedTab.map((tab: string) => {
             return(<Link key={tab.toLowerCase()} className={(this.props.title === tab)? styles.title_btn_pressed:styles.title_btn} to={(tab === "Home")? "/":`/${tab.toLowerCase()}`}>{tab}</Link>)
           })
           }
-          {this._PinnedTab.includes(this.props.title)? <></>:<Link key={this.props.title.toLowerCase().replaceAll(" ", "_")} className={styles.title_btn_pressed} to={`/${this.props.title.toLowerCase().replaceAll(" ", "_")}`}>{this.props.title}</Link>}
         </div>
         <div className={styles.close_btn}><FontAwesomeIcon icon="xmark"/></div>
       </div>
