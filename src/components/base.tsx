@@ -39,14 +39,13 @@ class Cointainer extends React.Component<{children: JSX.Element}, {bg: bgMetadat
   render(): React.ReactNode {
     return(
       <ThemeStateContext.Provider value={this.state.theme}>
-        <div className={styles.container} style={{ backgroundImage: `url(${this.state.bg.file})`, }}>
-          <SimpleBar className={styles.wrapper}>
-            <div className={styles.main}>
-              { this.props.children }
-            </div>
-          </SimpleBar>
+        <div className={styles.bg} style={{ backgroundImage: `url(${this.state.bg.file})`, }}></div>
+        <SimpleBar className={styles.wrapper}>
           <div className={styles.bg_info}><a href={this.state.bg.url} rel="noreferrer" target="_blank"><p>Artist: {this.state.bg.artist}</p><p>Source: {this.state.bg.source}</p></a></div>
-        </div>
+          <div className={styles.main}>
+            { this.props.children }
+          </div>
+        </SimpleBar>
         <div className={styles.theme_btn} onClick={() => {this.setState({theme: useThemeColor.getNextColor()})}}><FontAwesomeIcon icon="repeat" color={this.state.theme} /></div>
       </ThemeStateContext.Provider>
     )
