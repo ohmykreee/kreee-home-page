@@ -39,13 +39,14 @@ export const SEO = ({ title, description, pathname, children }: SEO): JSX.Elemen
     <>
       <Helmet
         htmlAttributes={{
-          lang: "en",
+          lang: "en-us",
         }}
       />
       <title>{seo.title}</title>
 
       <meta name="siteBaseUrl" content={seo.baseUrl} />
       <meta charSet="utf-8" />
+      <meta http-httpEquiv="content-language" content="en-US" />
       <meta name="author" content="Kreee" />
       <meta name="description" content={seo.description} />
       <meta name="keywords" content="kreee,personal,responsive,font awesome,react" />
