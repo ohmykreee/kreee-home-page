@@ -6,12 +6,11 @@
   line-height: 1.5rem;
   text-align: center;
   color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 8rem;
+  margin-bottom: 2rem;
 }
 
 @media (min-width: $breakpoint) {
   .footer {
     width: calc($breakpoint - 16px);
-    margin-bottom: 2rem;
   }
 }

@@ -34,6 +34,11 @@ class Cointainer extends React.Component<{children: JSX.Element}, {bg: bgMetadat
 
   componentDidMount(): void {
     this.setState({bg: useRandomBg()})
+    // trick to solve viewpoint size is'n calcuated currently on mobile browser using vh
+    document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
+    window.addEventListener('resize', () => {
+      document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`)
+    })
   }
 
   render(): React.ReactNode {

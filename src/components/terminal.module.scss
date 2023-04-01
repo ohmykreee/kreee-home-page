@@ -94,7 +94,7 @@
 @media (min-width: $breakpoint) {
   .terminal_container {
     width: calc($breakpoint - 16px);
-    margin-top: 20vh;
+    margin-top: 15%;
   }
 
   .title_btn, .title_btn_pressed{
