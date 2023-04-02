@@ -10,7 +10,7 @@ export const Terminal = ({ title, children }: {title: string, children: JSX.Elem
     <ThemeStateContext.Consumer>
       {theme => {
         return(
-          <div className={styles.terminal_container} style={{outlineColor: theme}}>
+          <div className={styles.terminal_container} style={{color: theme}}>
           <TerminalTitle title={title}/>
           <TerminalWindow>{ children }</TerminalWindow>
         </div>
