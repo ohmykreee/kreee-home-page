@@ -76,7 +76,7 @@ class BriefBio extends React.Component<{theme: string | undefined}> {
       <>
       <div><span className={styles.terminal_domain}>{this._bioMetadata.props}</span>:<span className={styles.terminal_path}>~</span>$ info</div>
       <div className={styles.bio_container} ref={this.bioRef}>
-        <img src={this._bioMetadata.avatar} alt="Kreee's avatar" style={{outlineColor: this.props.theme}}></img>
+        <img src={this._bioMetadata.avatar} alt="Kreee's avatar" style={{color: this.props.theme}}></img>
         <Typewriter
           onInit={(typewriter) => {
             typewriter.typeString(this._typedText)

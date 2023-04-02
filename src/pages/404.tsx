@@ -16,7 +16,7 @@ const NotFoundPage: React.FC<PageProps> = () => {
       {theme => {
         return (
           <div className={styles.container}>
-            <Link to="/"><img src="/avatar.jpg" alt="404 - Not Found" style={{outlineColor: theme}}></img></Link>
+            <Link to="/"><img src="/avatar.jpg" alt="404 - Not Found" style={{color: theme}}></img></Link>
             <p>404 | This page could not be found. 👾<br />
             You can use the navigation above to go back to Home.</p>
           </div>
