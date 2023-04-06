@@ -22,9 +22,11 @@
     border-radius: 9999px;
     flex-shrink: 0;
     width: 30vw;
+    height: 30vw;
     align-self: center;
     margin-top: 1rem;
     box-shadow: 0 0 0 2px;
+    line-height: 30vw;
   }
   .Typewriter__wrapper {
     flex-grow: 1;
@@ -52,7 +54,9 @@
     flex-direction: row;
     img {
       width: 13rem;
+      height: 13rem;
       margin: 1.25rem 3rem 2.25rem 3rem;
+      line-height: 13rem;
     }
   }
 
