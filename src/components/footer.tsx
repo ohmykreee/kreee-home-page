@@ -27,7 +27,7 @@ export const Footer = (): JSX.Element => {
 
   return (
     <div className={styles.footer}>
-      <p>Kreee Jiang powered 2021 - {buildYear}.<br />
+      <p>Kre<sup>3</sup> powered 2021-{buildYear}.<br />
       <a href={sourceCode} rel="noreferrer" target="_blank">Source Code</a></p>
     </div>
   )
