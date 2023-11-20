@@ -1,4 +1,4 @@
-name: Publish site to GitHub Pages
+name: Publish site to Cloudflare Pages
 
 on:
   workflow_dispatch:
@@ -27,12 +27,10 @@ jobs:
           
       - name: Deploy to GitHub Pages
         if: success()
-        uses: crazy-max/ghaction-github-pages@v3
+        uses: cloudflare/pages-action@v1.5.0
         with:
-          target_branch: gh-pages
-          build_dir: public
-          jekyll: false
-          fqdn: www.ohmykreee.top
-          dry_run: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: d73a30412652351305e3f89fd125f690
+          projectName: homepage
+          directory: public
+          branch: main
