@@ -10,6 +10,9 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
@@ -27,10 +30,8 @@ jobs:
           
       - name: Deploy to Cloudflare Pages
         if: success()
-        uses: cloudflare/pages-action@v1.5.0
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: d73a30412652351305e3f89fd125f690
-          projectName: homepage
-          directory: public
-          branch: main
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy public --project-name=blog --branch main
