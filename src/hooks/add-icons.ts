@@ -1,6 +1,6 @@
 import { library } from "@fortawesome/fontawesome-svg-core"
 import { faRepeat, faXmark, faSquareRss, faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
-import { faGithub, faTwitter, faSteam, faBilibili } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faSteam, faBilibili, faSquareBluesky, faSquareTwitter } from "@fortawesome/free-brands-svg-icons"
 import type { IconDefinition, IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core"
 
 const initIcon = (): void => {
@@ -20,7 +20,8 @@ const initIcon = (): void => {
     faRepeat,
     faXmark,
     faGithub,
-    faTwitter,
+    faSquareTwitter,
+    faSquareBluesky,
     faSteam,
     faBilibili,
     faSquareRss,
