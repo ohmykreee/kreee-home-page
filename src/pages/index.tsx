@@ -84,7 +84,7 @@ class BriefBio extends React.Component<{theme: string | undefined}> {
           }}
           options={{
             autoStart: false,
-            delay: 1,
+            delay: 0.3,
             loop: false,
             cursor: "",
             wrapperClassName: "Typewriter__wrapper"
