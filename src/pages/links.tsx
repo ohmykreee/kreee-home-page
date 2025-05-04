@@ -89,6 +89,8 @@ class LinksList extends React.Component<{filteredLinks: LinkDisplayed}> {
       switch (this.props.filteredLinks.search) {
         case "kreee":
         case "ohmykreee":
+        case "kre3":
+        case "kre":
         case "hi":
         case "hello":
           return(<span>Hi, Kreee is here! 🐺</span>)

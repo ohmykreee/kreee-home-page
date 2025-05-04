@@ -6,10 +6,10 @@ const config: GatsbyConfig = {
   // },
   siteMetadata: {
     title: `Kreee's Home Page`,
-    siteUrl: `https://www.ohmykreee.top`,
-    description: `Home page of ohmykreee.top`,
+    siteUrl: `https://www.kre3.net`,
+    description: `Landing page of kre3.net`,
     image: `/cover.jpg`,
-    twitterUsername: `@ohmykreee`,
+    twitterUsername: `@turbokre`,
     sourceCode: `https://github.com/ohmykreee/kreee-home-page`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
