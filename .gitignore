@@ -38,3 +38,4 @@ graphql.config.js
 
 # others
 build-res
+.tool-versions
