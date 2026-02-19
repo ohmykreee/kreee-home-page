@@ -1,4 +1,8 @@
 # Home Page - Kreee
+
+> [!WARNING]
+> This repo is deprecated, you should go to the newer/re-written frontend of this site (with Svelte 5 and SvelteKit): [ohmykreee/kre3-landing](https://github.com/ohmykreee/kre3-landing)
+
 ## About
 Landing page of [kre3.net](https://www.kre3.net). Written with React & Gatsby.
 
